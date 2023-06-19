@@ -27,7 +27,7 @@ If you have made custom Webpack configurations, follow these additional steps:
 If you haven't made any custom Webpack configurations, follow these steps:
 
 1. Run `npm run build` to build the production-ready extension using the default Create React App configurations.
-2. Install and run the Node Proxy Server ([link](https://github.com/rgbmdq/Node-Proxy))
+2. Install and run the Node Proxy Server ([link](https://github.com/rgbmdq/Proxy-CORS))
 3. Open Google Chrome.
 4. Navigate to `chrome://extensions` in the address bar.
 5. Enable the "Developer mode" toggle button in the top right corner.
