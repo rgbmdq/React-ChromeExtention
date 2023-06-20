@@ -17,6 +17,7 @@ const DishHeader: React.FC<DishHeaderProps> = ({ name, origin }) => {
         justifyContent: 'space-between',
         width: '362px',
         height: '24px',
+        marginTop: '24px'
       }}
       data-testid='dish-header'
     >

@@ -3,9 +3,10 @@ import React from 'react'
 interface IngredientBoxProps {
   value: string | number
   label: string
+  styles?: React.CSSProperties;
 }
 
-const IngredientBox: React.FC<IngredientBoxProps> = ({ value, label }) => {
+const IngredientBox: React.FC<IngredientBoxProps> = ({ value, label, styles }) => {
   const orangeStyle = {
     fontSize: '16px',
     fontFamily: 'Helvetica Neue',
@@ -46,6 +47,7 @@ const IngredientBox: React.FC<IngredientBoxProps> = ({ value, label }) => {
         width: '145px',
         height: '44px',
         textAlign: 'left',
+        ...styles
       }}
     >
       <p

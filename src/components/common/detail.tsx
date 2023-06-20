@@ -1,4 +1,5 @@
 import React from 'react'
+
 import IngredientBox from './ingredientBox'
 
 interface DetailProps {
@@ -29,20 +30,46 @@ const Detail: React.FC<DetailProps> = ({
         borderRadius: '6px',
         width: '362px',
         height: '228px',
-        padding: '13px 0px 13px 24px',
+        padding: '14px 0px 14px 14px',
         display: 'flex',
         flexWrap: 'wrap',
         gap: '8px',
+        marginTop: '8px',
       }}
       data-testid='detail'
     >
-      <IngredientBox label={'Protein'} value={protein} />
-      <IngredientBox label={'Spice Level'} value={produce} />
-      <IngredientBox label={'Spices'} value={spice} />
+      <IngredientBox
+        label={'Protein'}
+        styles={{
+          marginRight: '16px',
+        }}
+        value={protein}
+      />
+      <IngredientBox
+        label={'Produce'}
+        styles={{
+          marginRight: '16px',
+        }}
+        value={produce}
+      />
+      <IngredientBox label={'Spices'} styles={{
+    marginRight: '16px' }} value={spice} />
       <IngredientBox label={'Cooking Oil'} value={cookingOil} />
-      <IngredientBox label={'Volume/Weight'} value={volume} />
+      <IngredientBox
+        label={'Volume/Weight'}
+        styles={{
+          marginRight: '16px',
+        }}
+        value={volume}
+      />
       <IngredientBox label={'Serves'} value={serves} />
-      <IngredientBox label={'Authenticity'} value={authenticity} />
+      <IngredientBox
+        label={'Authenticity'}
+        styles={{
+          marginRight: '16px',
+        }}
+        value={authenticity}
+      />
       <IngredientBox label={'Stock'} value={stock} />
     </div>
   )
