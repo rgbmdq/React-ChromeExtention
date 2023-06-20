@@ -68,6 +68,9 @@ const DishHeader: React.FC<DishHeaderProps> = ({ name, origin }) => {
             height: '24px',
             background: '#171F2F',
             borderRadius: '30px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           <TwitterSvg />
@@ -78,6 +81,9 @@ const DishHeader: React.FC<DishHeaderProps> = ({ name, origin }) => {
             height: '24px',
             background: '#171F2F',
             borderRadius: '30px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           <TelegramSvg />
@@ -88,6 +94,9 @@ const DishHeader: React.FC<DishHeaderProps> = ({ name, origin }) => {
             height: '24px',
             background: '#171F2F',
             borderRadius: '30px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           <MediumSocialSvg />
