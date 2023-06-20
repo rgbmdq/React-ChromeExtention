@@ -19,6 +19,7 @@ const Recipe: React.FC<RecipeProps> = ({ description, difficulty }) => {
         borderRadius: '6px',
         width: '362px',
         height: '264px',
+        marginTop: '24px'
       }}
       data-testid='recipe'
     >
