@@ -1,6 +1,7 @@
 import React from 'react'
-import { PaellaSvg } from '../icons'
+
 import { difficultyLevels } from '../../helpers/constant'
+import { PaellaSvg } from '../icons'
 
 interface RecipeProps {
   description: string

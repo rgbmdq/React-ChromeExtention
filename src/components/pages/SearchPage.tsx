@@ -4,6 +4,7 @@ import { difficultyLevels } from '../../helpers/constant'
 import { Dish } from '../../helpers/types'
 import { SearchBar, Recipe, Detail, DishHeader } from '../common'
 import { SpainSvg, IndiaSvg, ThailandSvg, VietnamSvg, EasySvg, MediumSvg, HardSvg } from '../icons'
+
 interface SearchPageProps {
   searchResults: Dish[] | null | undefined
   handleSearch: (query: string) => void
@@ -14,11 +15,37 @@ interface SearchPageProps {
 const SearchPage: React.FC<SearchPageProps> = ({ searchResults, handleSearch, handleDishSelect, selectedDish }) => {
   return (
     <div className='Container'>
-      <div className='SearchContainer'>
+      <div style={{ position: 'relative' }}>
         <SearchBar onSearch={handleSearch} />
-        <ul className='SearchResults'>
+        <ul
+          style={{
+            position: 'absolute',
+            top: '38px',
+            width: '364px',
+            background: '#121826',
+            textAlign: 'left',
+            color: 'white',
+            cursor: 'pointer',
+            borderRadius: '6px',
+            zIndex: 1,
+            listStyle: 'none',
+            padding: 0,
+            maxHeight: '190px',
+            overflowY: 'auto',
+          }}
+        >
           {searchResults?.map((dish, index) => (
-            <li onClick={() => handleDishSelect(dish)} className='SearchResultItem' key={index}>
+            <li onClick={() => handleDishSelect(dish)} style={{
+              transition: 'opacity 0.3s',
+              margin: '4px',
+              borderRadius: '6px',
+              display: 'flex',
+              padding: '6px 6px 6px 12px',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}
+             key={index}>
               <div
                 style={{
                   display: 'flex',
@@ -72,7 +99,7 @@ const SearchPage: React.FC<SearchPageProps> = ({ searchResults, handleSearch, ha
           ))}
         </ul>
       </div>
-      <div className='DishContainer'>
+      <div>
         <DishHeader name={selectedDish?.name} origin={selectedDish?.origin} />
         {selectedDish ? (
           <>

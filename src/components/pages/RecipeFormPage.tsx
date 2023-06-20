@@ -2,31 +2,17 @@ import { Dish } from 'helpers/types'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import useDishCreation from '../../hooks/useDishCreation'
 import { RecipeForm } from '../common'
 import { BackSvg } from '../icons'
 
+
 const RecipeFormPage: React.FC = () => {
-  const proxy = 'http://localhost:3000/proxy?url='
+
+  const { createDish } = useDishCreation();
 
   const handleSubmit = async (values: Dish) => {
-    try {
-      const url = `${proxy}https://master-7rqtwti-yj2le3kr2yhmu.uk-1.platformsh.site/yumazoo/recipes`
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      })
-
-      if (response.status === 200) {
-        // TODO: Add Push Notificaiton: console.log("Form submitted successfully");
-      } else {
-        // TODO: Add Push Notificaiton: console.log("Form submission failed", response);
-      }
-    } catch (error) {
-      // TODO: Add Push Notificaiton: console.log("An error occurred during form submission:", error);
-    }
+    createDish(values);
   }
 
   return (
